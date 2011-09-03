@@ -86,21 +86,17 @@
 	-webkit-background-size: @type; /* Safari and Chrome */
 }
 
-.border-image(@source, @slice: '', @width: '', @outset: '', @repeat) {
-	@val: url(@source) @slice @width @outset @repeat;
-	
-	border-image: @val;
-	-moz-border-image: @val; /* Firefox */
-	-o-border-image: @val; /* Opera */
-	-webkit-border-image: @val; /* Safari and Chrome */
+.border-image(@image) {
+	border-image: @image;
+	-moz-border-image: @image; /* Firefox */
+	-o-border-image: @image; /* Opera */
+	-webkit-border-image: @image; /* Safari and Chrome */
 }
 
-.border-radius(@radius1: '', @radius2: '', @radius3: '', @radius4: '') {
-	@val: @radius1 @radius2 @radius3 @radius4;
-	
-	border-radius: @val;
-	-moz-border-radius: @val; /* Firefox */
-	-webkit-border-radius: @val; /* Safari and Chrome */
+.border-radius(@radius) {
+	border-radius: @radius;
+	-moz-border-radius: @radius; /* Firefox */
+	-webkit-border-radius: @radius; /* Safari and Chrome */
 }
 
 .box-align(@alignment) {
@@ -139,12 +135,10 @@
 	-webkit-box-pack: @position; /* Safari and Chrome */
 }
 
-.box-shadow(@h-shadow: 0, @v-shadow: 0, @blur: 1px, @spread: '', @color, @inset: '') {
-  @val: @h-shadow @v-shadow @blur @spread @color @inset;
-
-  box-shadow:         @val;
-  -moz-box-shadow:    @val; /* Firefox */
-  -webkit-box-shadow: @val; /* Safari and Chrome */
+.box-shadow(@shadow) {
+	box-shadow: @shadow;
+	-moz-box-shadow: @shadow; /* Firefox */
+	-webkit-box-shadow: @shadow; /* Safari and Chrome */
 }
 
 .box-sizing(@sizing) {
@@ -262,7 +256,7 @@
 	-xv-phonemes: @phonemes; /* Opera */
 }
 
-.opacity(@alpha: 0.5) {
+.opacity(@alpha) {
 	@alpha-ie: @alpha * 100;
 	
 	opacity: @alpha;
@@ -294,13 +288,11 @@
 	-webkit-transform-style: @style; /* Safari and Chrome */
 }
 
-.transition(@property, @duration: '', @timing-function: '', @delay: '') {
-	@val: @property @duration @timing-function @delay;
-	
-	transition: @val;
-	-moz-transition: @val; /* Firefox 4 */
-	-o-transition: @val; /* Opera */
-	-webkit-transition: @val; /* Safari and Chrome */
+.transition(@transition) {
+	transition: @transition;
+	-moz-transition: @transition; /* Firefox 4 */
+	-o-transition: @transition; /* Opera */
+	-webkit-transition: @transition; /* Safari and Chrome */
 }
 
 .transition-property(@property) {
