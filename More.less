@@ -1,0 +1,386 @@
+/**
+ * More.less: A Less CSS Library
+ * Version      : 0.9
+ * Last Updated : 2011-09-03
+ * Author       : Roel van Hintum
+ * Website      : http://roel.vanhintum.eu
+ */
+
+.animation(@name, @duration, @timing-function, @delay, @iteration-count, @direction)  {
+	@val: @name @duration @timing-function @delay @iteration-count @direction;
+	
+	animation: @val;
+	-moz-animation: @val; /* Firefox */
+	-webkit-animation: @val; /* Safari and Chrome */
+}
+
+.animation-name(@name) {
+	animation-name: @name;
+	-moz-animation-name: @name; /* Firefox */
+	-webkit-animation-name: @name; /* Safari and Chrome */
+}
+
+.animation-duration(@duration) {
+	animation-duration: @duration;
+	-moz-animation-duration: @duration; /* Firefox */
+	-webkit-animation-duration: @duration; /* Safari and Chrome */
+}
+
+.animation-timing-function(@timing-function) {
+	animation-timing-function: @timing-function;
+	-moz-animation-timing-function: @timing-function; /* Firefox */
+	-webkit-animation-timing-function: @timing-function; /* Safari and Chrome */
+}
+
+.animation-delay(@delay) {
+	animation-delay: @delay;
+	-moz-animation-delay: @delay; /* Firefox */
+	-webkit-animation-delay: @delay; /* Safari and Chrome */
+}
+
+.animation-iteration-count(@iteration-count) {
+	animation-iteration-count: @iteration-count;
+	-moz-animation-iteration-count: @iteration-count; /* Firefox */
+	-webkit-animation-iteration-count: @iteration-count; /* Safari and Chrome */
+}
+
+.animation-direction(@direction) {
+	animation-direction: @direction;
+	-moz-animation-direction: @direction; /* Firefox */
+	-webkit-animation-direction: @direction; /* Safari and Chrome */
+}
+
+.animation-play-state(@state) {
+	animation-play-state: @state;
+	-moz-animation-play-state: @state; /* Firefox */
+	-webkit-animation-play-state: @state; /* Safari and Chrome */
+}
+
+.appearance(@appearance) {
+	appearance: @appearance;
+	-moz-appearance: @appearance; /* Firefox */
+	-webkit-appearance: @appearance; /* Safari and Chrome */
+}
+
+.backface-visibility(@visibility) {
+	backface-visibility: @visibility;
+	-webkit-backface-visibility: @visibility; /* Safari and Chrome */
+}
+
+.background-clip(@clipping) {
+	background-clip: @clipping;
+	-webkit-background-clip: @clipping; /* Safari and Chrome */
+}
+
+.background-gradient(@startcolor, @endcolor) {
+	background: @startcolor;
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor)); /* Internet Explorer */
+	background: -webkit-gradient(linear, left top, left bottom, from(@startcolor), to(@endcolor)); /* Safari and Chrome */
+	background: -moz-linear-gradient(top,  @startcolor,  @endcolor); /* Firefox 3.6+ */
+}
+
+.background-size(@type: cover) {
+	background-size: @type;
+	-moz-background-size: @type; /* Firefox */
+	-o-background-size: @type; /* Opera */
+	-webkit-background-size: @type; /* Safari and Chrome */
+}
+
+.border-image(@source, @slice: '', @width: '', @outset: '', @repeat) {
+	@val: url(@source) @slice @width @outset @repeat;
+	
+	border-image: @val;
+	-moz-border-image: @val; /* Firefox */
+	-o-border-image: @val; /* Opera */
+	-webkit-border-image: @val; /* Safari and Chrome */
+}
+
+.border-radius(@radius1: '', @radius2: '', @radius3: '', @radius4: '') {
+	@val: @radius1 @radius2 @radius3 @radius4;
+	
+	border-radius: @val;
+	-moz-border-radius: @val; /* Firefox */
+	-webkit-border-radius: @val; /* Safari and Chrome */
+}
+
+.box-align(@alignment) {
+	box-align: @alignment;
+	-moz-box-align: @alignment; /* Firefox */
+	-webkit-box-align: @alignment; /* Safari and Chrome */
+}
+
+.box-direction(@direction) {
+	box-direction: @direction;
+	-moz-box-direction: @direction; /* Firefox */
+	-webkit-box-direction: @direction; /* Safari and Chrome */
+}
+
+.box-flex(@flexibility) {
+	box-flex: @flexibility;
+	-moz-box-flex: @flexibility; /* Firefox */
+	-webkit-box-flex: @flexibility; /* Safari and Chrome */
+}
+
+.box-ordinal-group(@group) {
+	box-ordinal-group: @group;
+	-moz-box-ordinal-group: @group; /* Firefox */
+	-webkit-box-ordinal-group: @group; /* Safari and Chrome */
+}
+
+.box-orient(@orientation) {
+	box-orient: @orientation;
+	-moz-box-orient: @orientation; /* Firefox */
+	-webkit-box-orient: @orientation; /* Safari and Chrome */
+}
+
+.box-pack(@position) {
+	box-pack: @position;
+	-moz-box-pack: @position; /* Firefox */
+	-webkit-box-pack: @position; /* Safari and Chrome */
+}
+
+.box-shadow(@h-shadow: 0, @v-shadow: 0, @blur: 1px, @spread: '', @color, @inset: '') {
+  @val: @h-shadow @v-shadow @blur @spread @color @inset;
+
+  box-shadow:         @val;
+  -moz-box-shadow:    @val; /* Firefox */
+  -webkit-box-shadow: @val; /* Safari and Chrome */
+}
+
+.box-sizing(@sizing) {
+	box-sizing: @sizing;
+	-moz-box-sizing: @sizing; /* Firefox */
+	-webkit-box-sizing: @sizing; /* Safari */
+}
+
+.column-gap(@sizing) {
+	column-gap: @sizing;
+	-moz-column-gap: @sizing; /* Firefox */
+	-webkit-column-gap: @sizing; /* Safari and Chrome */
+}
+
+.column-rule(@width, @style, @color) {
+	@val: @width @style @color;
+	
+	column-rule: @val;
+	-moz-column-rule: @val; /* Firefox */
+	-webkit-column-rule: @val; /* Safari and Chrome */
+}
+
+.column-rule-color(@color) {
+	column-rule-color: @color;
+	-moz-column-rule-color: @color; /* Firefox */
+	-webkit-column-rule-color: @color; /* Safari and Chrome */
+}
+
+.column-rule-style(@style) {
+	column-rule-style: @style;
+	-moz-column-rule-style: @style; /* Firefox */
+	-webkit-column-rule-style: @style; /* Safari and Chrome */
+}
+
+.column-rule-width(@width) {
+	column-rule-width: @width;
+	-moz-column-rule-width: @width; /* Firefox */
+	-webkit-column-rule-width: @width; /* Safari and Chrome */
+}
+
+.column-span(@span) {
+	column-span: @span;
+	-webkit-column-span: @span; /* Safari and Chrome */
+}
+
+.column-width(@width) {
+	column-width: @width;
+	-moz-column-width: @width; /* Safari and Chrome */
+	-webkit-column-width: @width; /* Safari and Chrome */
+}
+
+.columns(@width, @count) {
+	@val: @width @count;
+	
+	columns: @val;
+	-webkit-columns: @val; /* Safari and Chrome */
+}
+
+.column-count(@count) {
+	column-count: @count;
+	-moz-column-count: @count; /* Firefox */
+	-webkit-column-count: @count; /* Safari and Chrome */
+}
+
+.keyframes(@name, @from, @to) {
+	@val: e(%("%d { from {top:%d;} to {top:%d;} }", @name, @from, @to));
+	
+	e('@keyframes') @val
+	e('@-moz-keyframes') @val /* Firefox */
+	e('@-webkit-keyframes') @val /* Safari and Chrome */
+}
+
+.marquee-direction(@direction) {
+	/* UNTESTED, NO DOCUMENTATION AVAILABLE */
+	marquee-direction: @direction;
+	-moz-marquee-direction: @direction; /* Firefox */
+	-webkit-marquee-direction: @direction; /* Safari and Chrome */
+}
+
+.marquee-play-count(@count) {
+	/* UNTESTED, NO DOCUMENTATION AVAILABLE */
+	marquee-count: @count;
+	-moz-marquee-count: @count; /* Firefox */
+	-webkit-marquee-count: @count; /* Safari and Chrome */
+}
+
+.marquee-speed(@speed) {
+	/* UNTESTED, NO DOCUMENTATION AVAILABLE */
+	marquee-speed: @speed;
+	-moz-marquee-speed: @speed; /* Firefox */
+	-webkit-marquee-speed: @speed; /* Safari and Chrome */
+}
+
+.marquee-style(@style) {
+	/* UNTESTED, NO DOCUMENTATION AVAILABLE */
+	marquee-style: @style;
+	-moz-marquee-style: @style; /* Firefox */
+	-webkit-marquee-style: @style; /* Safari and Chrome */
+}
+
+.perspective(@perspective) {
+	perspective: @perspective;
+	-webkit-perspective: @perspective; /* Safari */
+}
+
+.perspective-origin(@x-axis, @y-axis) {
+	@val: @x-axis @y-axis;
+	
+	perspective-origin: @val;
+	-webkit-perspective-origin: @val; /* Safari */
+}
+
+.phonemes(@phonemes) {
+	phonemes: @phonemes;
+	-xv-phonemes: @phonemes; /* Opera */
+}
+
+.opacity(@alpha: 0.5) {
+	@alpha-ie: @alpha * 100;
+	
+	opacity: @alpha;
+	filter: e('alpha(opacity=')@alpha-ie e(')'); /* Internet Explorer */
+	-khtml-opacity: @alpha; /* Safari */
+	-moz-opacity: @alpha; /* Firefox */
+}
+
+.transform(@degrees) {
+	transform:rotate( @degrees );
+	-moz-transform:rotate( @degrees ); /* Firefox */
+	-ms-transform:rotate( @degrees ); /* IE 9 */
+	-o-transform:rotate( @degrees ); /* Opera */
+	-webkit-transform:rotate( @degrees ); /* Safari and Chrome */
+}
+
+.transform-origin(@x-axis, @y-axis) {
+	@val: @x-axis @y-axis;
+	
+	transform-origin: @val;
+	-moz-transform-origin: @val; /* Firefox */
+	-ms-transform-origin: @val; /* IE 9 */
+	-o-transform-origin: @val; /* Opera */
+	-webkit-transform-origin: @val; /* Safari and Chrome */
+}
+
+.transform-style(@style) {
+	transform-style: @style;
+	-webkit-transform-style: @style; /* Safari and Chrome */
+}
+
+.transition(@property, @duration: '', @timing-function: '', @delay: '') {
+	@val: @property @duration @timing-function @delay;
+	
+	transition: @val;
+	-moz-transition: @val; /* Firefox 4 */
+	-o-transition: @val; /* Opera */
+	-webkit-transition: @val; /* Safari and Chrome */
+}
+
+.transition-property(@property) {
+	transition-property: @property;
+	-moz-transition-property: @property; /* Firefox 4 */
+	-o-transition-property: @property; /* Opera */
+	-webkit-transition-property: @property; /* Safari and Chrome */
+}
+
+.transition-duration(@duration) {
+	transition-duration: @duration;
+	-moz-transition-duration: @duration; /* Firefox 4 */
+	-o-transition-duration: @duration; /* Opera */
+	-webkit-transition-duration: @duration; /* Safari and Chrome */
+}
+
+.transition-timing-function(@function) {
+	transition-timing-function: @function;
+	-moz-transition-timing-function: @function; /* Firefox 4 */
+	-o-transition-timing-function: @function; /* Opera */
+	-webkit-transition-timing-function: @function; /* Safari and Chrome */
+}
+
+.transition-delay(@delay) {
+	transition-delay: @delay;
+	-moz-transition-delay: @delay; /* Firefox 4 */
+	-o-transition-delay: @delay; /* Opera */
+	-webkit-transition-delay: @delay; /* Safari and Chrome */
+}
+
+.voice-balance(@balance) {
+	voice-balance: @balance;
+	-xv-voice-balance: @balance; /* Opera */
+}
+
+.voice-duration(@duration) {
+	voice-duration: @duration;
+	-xv-voice-duration: @duration; /* Opera */
+}
+
+.voice-pitch(@pitch) {
+	voice-pitch: @pitch;
+	-xv-voice-pitch: @pitch; /* Opera */
+}
+
+.voice-pitch-range(@range) {
+	voice-pitch-range: @range;
+	-xv-voice-pitch-range: @range; /* Opera */
+}
+
+.voice-rate(@rate) {
+	voice-rate: @rate;
+	-xv-voice-rate: @rate; /* Opera */
+}
+
+.voice-stress(@stress) {
+	voice-stress: @stress;
+	-xv-voice-stress: @stress; /* Opera */
+}
+
+.voice-volume(@volume) {
+	voice-volume: @volume;
+	-xv-voice-volume: @volume; /* Opera */
+}
+
+/**
+ * Additional functions
+ */
+.clear-float() {
+	&:after {
+		clear: both;
+	    content: ".";
+	    display: block;
+	    height: 0;
+	    visibility: hidden;
+	}
+}
+
+.display-inline-block() {
+	display: inline-block;
+	zoom: 1; /* Internet Explorer */
+	*display: inline; /* Internet Explorer */
+}
