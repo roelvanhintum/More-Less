@@ -204,11 +204,9 @@
 }
 
 .keyframes(@name, @from, @to) {
-	@val: e(%("%d { from {top:%d;} to {top:%d;} }", @name, @from, @to));
-	
-	e('@keyframes') @val
-	e('@-moz-keyframes') @val /* Firefox */
-	e('@-webkit-keyframes') @val /* Safari and Chrome */
+	@keyframes @name { from {top: @from;} to {top: @to;} }
+	@-moz-keyframes @name { from {top: @from;} to {top: @to;} } /* Firefox */
+	@-webkit-keyframes @name { from {top: @from;} to {top: @to;} } /* Safari and Chrome */
 }
 
 .marquee-direction(@direction) {
