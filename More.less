@@ -11,36 +11,42 @@
 	
 	animation: @val;
 	-moz-animation: @val; /* Firefox */
+	-ms-animation: @val; /* Internet Explore 9 */
 	-webkit-animation: @val; /* Safari and Chrome */
 }
 
 .animation-name(@name) {
 	animation-name: @name;
 	-moz-animation-name: @name; /* Firefox */
+	-ms-animation-name: @name; /* Internet Explore 9 */
 	-webkit-animation-name: @name; /* Safari and Chrome */
 }
 
 .animation-duration(@duration) {
 	animation-duration: @duration;
 	-moz-animation-duration: @duration; /* Firefox */
+	-ms-animation-duration: @duration; /* Internet Explore 9 */
 	-webkit-animation-duration: @duration; /* Safari and Chrome */
 }
 
 .animation-timing-function(@timing-function) {
 	animation-timing-function: @timing-function;
 	-moz-animation-timing-function: @timing-function; /* Firefox */
+	-ms-animation-timing-function: @timing-function; /* Internet Explore 9 */
 	-webkit-animation-timing-function: @timing-function; /* Safari and Chrome */
 }
 
 .animation-delay(@delay) {
 	animation-delay: @delay;
 	-moz-animation-delay: @delay; /* Firefox */
+	-ms-animation-delay: @delay; /* Internet Explore 9 */
 	-webkit-animation-delay: @delay; /* Safari and Chrome */
 }
 
 .animation-iteration-count(@iteration-count) {
 	animation-iteration-count: @iteration-count;
 	-moz-animation-iteration-count: @iteration-count; /* Firefox */
+	-ms-animation-iteration-count: @iteration-count; /* Internet Explore 9 */
 	-webkit-animation-iteration-count: @iteration-count; /* Safari and Chrome */
 }
 
@@ -53,6 +59,7 @@
 .animation-play-state(@state) {
 	animation-play-state: @state;
 	-moz-animation-play-state: @state; /* Firefox */
+	-ms-animation-play-state: @state; /* Internet Explore 9 */
 	-webkit-animation-play-state: @state; /* Safari and Chrome */
 }
 
@@ -75,8 +82,9 @@
 .background-gradient(@startcolor, @endcolor) {
 	background: @startcolor;
 	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor)); /* Internet Explorer */
-	background: -webkit-gradient(linear, left top, left bottom, from(@startcolor), to(@endcolor)); /* Safari and Chrome */
 	background: -moz-linear-gradient(top,  @startcolor,  @endcolor); /* Firefox 3.6+ */
+	background: -ms-linear-gradient(top,  @startcolor,  @endcolor); /* Internet Explore 9 */
+	background: -webkit-gradient(linear, left top, left bottom, from(@startcolor), to(@endcolor)); /* Safari and Chrome */
 }
 
 .background-size(@type: cover) {
@@ -206,6 +214,7 @@
 .keyframes(@name, @from, @to) {
 	@keyframes @name { from {top: @from;} to {top: @to;} }
 	@-moz-keyframes @name { from {top: @from;} to {top: @to;} } /* Firefox */
+	@-ms-keyframes @name { from {top: @from;} to {top: @to;} } /* Internet Explore 9 */
 	@-webkit-keyframes @name { from {top: @from;} to {top: @to;} } /* Safari and Chrome */
 }
 
@@ -264,11 +273,11 @@
 }
 
 .transform(@degrees) {
-	transform:rotate( @degrees );
-	-moz-transform:rotate( @degrees ); /* Firefox */
-	-ms-transform:rotate( @degrees ); /* IE 9 */
-	-o-transform:rotate( @degrees ); /* Opera */
-	-webkit-transform:rotate( @degrees ); /* Safari and Chrome */
+	transform: rotate( @degrees );
+	-moz-transform: rotate( @degrees ); /* Firefox */
+	-ms-transform: rotate( @degrees ); /* Internet Explore 9 */
+	-o-transform: rotate( @degrees ); /* Opera */
+	-webkit-transform: rotate( @degrees ); /* Safari and Chrome */
 }
 
 .transform-origin(@x-axis, @y-axis) {
@@ -276,7 +285,7 @@
 	
 	transform-origin: @val;
 	-moz-transform-origin: @val; /* Firefox */
-	-ms-transform-origin: @val; /* IE 9 */
+	-ms-transform-origin: @val; /* Internet Explore 9 */
 	-o-transform-origin: @val; /* Opera */
 	-webkit-transform-origin: @val; /* Safari and Chrome */
 }
@@ -289,6 +298,7 @@
 .transition(@transition) {
 	transition: @transition;
 	-moz-transition: @transition; /* Firefox 4 */
+	-ms-transition: @transition; /* Internet Explore 9 */
 	-o-transition: @transition; /* Opera */
 	-webkit-transition: @transition; /* Safari and Chrome */
 }
@@ -296,6 +306,7 @@
 .transition-property(@property) {
 	transition-property: @property;
 	-moz-transition-property: @property; /* Firefox 4 */
+	-ms-transition-property: @property; /* Internet Explore 9 */
 	-o-transition-property: @property; /* Opera */
 	-webkit-transition-property: @property; /* Safari and Chrome */
 }
@@ -303,6 +314,7 @@
 .transition-duration(@duration) {
 	transition-duration: @duration;
 	-moz-transition-duration: @duration; /* Firefox 4 */
+	-ms-transition-duration: @duration; /* Internet Explore 9 */
 	-o-transition-duration: @duration; /* Opera */
 	-webkit-transition-duration: @duration; /* Safari and Chrome */
 }
@@ -310,6 +322,7 @@
 .transition-timing-function(@function) {
 	transition-timing-function: @function;
 	-moz-transition-timing-function: @function; /* Firefox 4 */
+	-ms-transition-timing-function: @function; /* Internet Explore 9 */
 	-o-transition-timing-function: @function; /* Opera */
 	-webkit-transition-timing-function: @function; /* Safari and Chrome */
 }
@@ -317,6 +330,7 @@
 .transition-delay(@delay) {
 	transition-delay: @delay;
 	-moz-transition-delay: @delay; /* Firefox 4 */
+	-ms-transition-delay: @delay; /* Internet Explore 9 */
 	-o-transition-delay: @delay; /* Opera */
 	-webkit-transition-delay: @delay; /* Safari and Chrome */
 }
