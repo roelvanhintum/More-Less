@@ -389,6 +389,15 @@
 	*display: inline; /* Internet Explorer */
 }
 
+.select-color(@color) {
+	/* Selection colours (easy to forget) */
+	::selection { background: @color; }
+	::-moz-selection { background: @color; } /* Firefox */
+	img::selection { background: transparent; }
+	img::-moz-selection { background: transparent; } /* Firefox */
+	body { -webkit-tap-highlight-color: @color; } /* Safari and Chrome */
+}
+
 .reset() {
 	/* http://meyerweb.com/eric/tools/css/reset/ 
 	   v2.0 | 20110126
