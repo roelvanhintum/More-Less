@@ -389,13 +389,19 @@
 	*display: inline; /* Internet Explorer */
 }
 
+/* Selection colours (easy to forget) */
 .select-color(@color) {
-	/* Selection colours (easy to forget) */
-	::selection { background: @color; }
-	::-moz-selection { background: @color; } /* Firefox */
-	img::selection { background: transparent; }
-	img::-moz-selection { background: transparent; } /* Firefox */
-	body { -webkit-tap-highlight-color: @color; } /* Safari and Chrome */
+	* {
+		&::selection { background: @color; }
+		&::-moz-selection { background: @color; } /* Firefox */
+		&::-webkit-selection { background: @color; } /* Safari and Chrome */
+		
+		img {
+			&::selection { background: transparent; }
+			&::-moz-selection { background: transparent; } /* Firefox */
+			&::-webkit-selection { background: transparent; } /* Safari and Chrome */
+		}
+	}
 }
 
 .reset() {
