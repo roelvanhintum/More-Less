@@ -212,10 +212,10 @@
 }
 
 .keyframes(@name, @from, @to) {
-	@keyframes @name { from {top: @from;} to {top: @to;} }
-	@-moz-keyframes @name { from {top: @from;} to {top: @to;} } /* Firefox */
-//	@-ms-keyframes @name { from {top: @from;} to {top: @to;} } /* Internet Explore 9 */
-	@-webkit-keyframes @name { from {top: @from;} to {top: @to;} } /* Safari and Chrome */
+	@keyframes @name { from {@from} to {@to} }
+	@-moz-keyframes @name { from {@from} to {@to} } /* Firefox */
+	@-ms-keyframes @name { from {@from} to {@to} } /* Internet Explore 9 */
+	@-webkit-keyframes @name { from {@from} to {@to} } /* Safari and Chrome */
 }
 
 .marquee-direction(@direction) {
