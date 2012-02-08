@@ -263,13 +263,13 @@
 	-xv-phonemes: @phonemes; /* Opera */
 }
 
-.opacity(@alpha) {
-	@alpha-ie: @alpha * 100;
+.opacity(@opacity: 100) {
+	@normal-opacity: @opacity / 100;
 	
-	opacity: @alpha;
-	filter: e('alpha(opacity=')@alpha-ie e(')'); /* Internet Explorer */
-	-khtml-opacity: @alpha; /* Safari */
-	-moz-opacity: @alpha; /* Firefox */
+	opacity: @normal-opacity;
+	filter: e('alpha(opacity=')@opacity e(')'); /* Internet Explorer */
+	-khtml-opacity: @normal-opacity; /* Safari */
+	-moz-opacity: @normal-opacity; /* Firefox */
 }
 
 .transform(@degrees) {
