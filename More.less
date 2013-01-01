@@ -1,353 +1,120 @@
 /**
  * More.less: A Less CSS Library
  * Version      : 0.9
- * Last Updated : 2011-09-03
+ * Last Updated : 2012-01-01
  * Author       : Roel van Hintum
  * Website      : http://roel.vanhintum.eu
  */
 
-.animation(@name, @duration, @timing-function, @delay, @iteration-count, @direction)  {
-	@val: @name @duration @timing-function @delay @iteration-count @direction;
-	
-	animation: @val;
-	-moz-animation: @val; /* Firefox */
-	-ms-animation: @val; /* Internet Explore 9 */
-	-webkit-animation: @val; /* Safari and Chrome */
-}
-
-.animation-name(@name) {
-	animation-name: @name;
-	-moz-animation-name: @name; /* Firefox */
-	-ms-animation-name: @name; /* Internet Explore 9 */
-	-webkit-animation-name: @name; /* Safari and Chrome */
-}
-
-.animation-duration(@duration) {
-	animation-duration: @duration;
-	-moz-animation-duration: @duration; /* Firefox */
-	-ms-animation-duration: @duration; /* Internet Explore 9 */
-	-webkit-animation-duration: @duration; /* Safari and Chrome */
-}
-
-.animation-timing-function(@timing-function) {
-	animation-timing-function: @timing-function;
-	-moz-animation-timing-function: @timing-function; /* Firefox */
-	-ms-animation-timing-function: @timing-function; /* Internet Explore 9 */
-	-webkit-animation-timing-function: @timing-function; /* Safari and Chrome */
-}
-
-.animation-delay(@delay) {
-	animation-delay: @delay;
-	-moz-animation-delay: @delay; /* Firefox */
-	-ms-animation-delay: @delay; /* Internet Explore 9 */
-	-webkit-animation-delay: @delay; /* Safari and Chrome */
-}
-
-.animation-iteration-count(@iteration-count) {
-	animation-iteration-count: @iteration-count;
-	-moz-animation-iteration-count: @iteration-count; /* Firefox */
-	-ms-animation-iteration-count: @iteration-count; /* Internet Explore 9 */
-	-webkit-animation-iteration-count: @iteration-count; /* Safari and Chrome */
-}
-
-.animation-direction(@direction) {
-	animation-direction: @direction;
-	-moz-animation-direction: @direction; /* Firefox */
-	-webkit-animation-direction: @direction; /* Safari and Chrome */
-}
-
-.animation-play-state(@state) {
-	animation-play-state: @state;
-	-moz-animation-play-state: @state; /* Firefox */
-	-ms-animation-play-state: @state; /* Internet Explore 9 */
-	-webkit-animation-play-state: @state; /* Safari and Chrome */
-}
-
 .appearance(@appearance) {
-	appearance: @appearance;
-	-moz-appearance: @appearance; /* Firefox */
 	-webkit-appearance: @appearance; /* Safari and Chrome */
+	-moz-appearance: @appearance; /* Firefox */
+	appearance: @appearance;
 }
 
 .backface-visibility(@visibility) {
-	backface-visibility: @visibility;
 	-webkit-backface-visibility: @visibility; /* Safari and Chrome */
+	-moz-backface-visibility: @visibility; /* Firefox */
+	-ms-backface-visibility: @visibility; /* Internet Explorer */
+	backface-visibility: @visibility;
 }
 
-.background-clip(@clipping) {
-	background-clip: @clipping;
-	-webkit-background-clip: @clipping; /* Safari and Chrome */
-}
-
-.background-gradient(@startcolor, @endcolor) {
+.background-gradient(@angle: top, @startcolor, @endcolor) {
 	background: @startcolor;
+	background: -webkit-linear-gradient(@angle,  @startcolor,  @endcolor); /* Safari and Chrome */
+	background: -moz-linear-gradient(@angle,  @startcolor,  @endcolor); /* Firefox 3.6+ */
 	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor)); /* Internet Explorer */
-	background: -moz-linear-gradient(top,  @startcolor,  @endcolor); /* Firefox 3.6+ */
-	background: -ms-linear-gradient(top,  @startcolor,  @endcolor); /* Internet Explore 9 */
-	background: -webkit-gradient(linear, left top, left bottom, from(@startcolor), to(@endcolor)); /* Safari and Chrome */
-}
-
-.background-size(@type: cover) {
-	background-size: @type;
-	-moz-background-size: @type; /* Firefox */
-	-o-background-size: @type; /* Opera */
-	-webkit-background-size: @type; /* Safari and Chrome */
+	background: linear-gradient(@angle,  @startcolor,  @endcolor);
 }
 
 .border-image(@image) {
-	border-image: @image;
-	-moz-border-image: @image; /* Firefox */
-	-o-border-image: @image; /* Opera */
 	-webkit-border-image: @image; /* Safari and Chrome */
-}
-
-.border-radius(@radius) {
-	border-radius: @radius;
-	-moz-border-radius: @radius; /* Firefox */
-	-webkit-border-radius: @radius; /* Safari and Chrome */
-}
-
-.box-align(@alignment) {
-	box-align: @alignment;
-	-moz-box-align: @alignment; /* Firefox */
-	-webkit-box-align: @alignment; /* Safari and Chrome */
-}
-
-.box-direction(@direction) {
-	box-direction: @direction;
-	-moz-box-direction: @direction; /* Firefox */
-	-webkit-box-direction: @direction; /* Safari and Chrome */
-}
-
-.box-flex(@flexibility) {
-	box-flex: @flexibility;
-	-moz-box-flex: @flexibility; /* Firefox */
-	-webkit-box-flex: @flexibility; /* Safari and Chrome */
-}
-
-.box-ordinal-group(@group) {
-	box-ordinal-group: @group;
-	-moz-box-ordinal-group: @group; /* Firefox */
-	-webkit-box-ordinal-group: @group; /* Safari and Chrome */
-}
-
-.box-orient(@orientation) {
-	box-orient: @orientation;
-	-moz-box-orient: @orientation; /* Firefox */
-	-webkit-box-orient: @orientation; /* Safari and Chrome */
-}
-
-.box-pack(@position) {
-	box-pack: @position;
-	-moz-box-pack: @position; /* Firefox */
-	-webkit-box-pack: @position; /* Safari and Chrome */
+	-o-border-image: @image; /* Opera */
+	border-image: @image;
 }
 
 .box-shadow(@shadow) {
-	box-shadow: @shadow;
-	-moz-box-shadow: @shadow; /* Firefox */
 	-webkit-box-shadow: @shadow; /* Safari and Chrome */
+	box-shadow: @shadow;
 }
 
 .box-sizing(@sizing) {
-	box-sizing: @sizing;
-	-moz-box-sizing: @sizing; /* Firefox */
 	-webkit-box-sizing: @sizing; /* Safari */
-}
-
-.column-gap(@sizing) {
-	column-gap: @sizing;
-	-moz-column-gap: @sizing; /* Firefox */
-	-webkit-column-gap: @sizing; /* Safari and Chrome */
-}
-
-.column-rule(@width, @style, @color) {
-	@val: @width @style @color;
-	
-	column-rule: @val;
-	-moz-column-rule: @val; /* Firefox */
-	-webkit-column-rule: @val; /* Safari and Chrome */
-}
-
-.column-rule-color(@color) {
-	column-rule-color: @color;
-	-moz-column-rule-color: @color; /* Firefox */
-	-webkit-column-rule-color: @color; /* Safari and Chrome */
-}
-
-.column-rule-style(@style) {
-	column-rule-style: @style;
-	-moz-column-rule-style: @style; /* Firefox */
-	-webkit-column-rule-style: @style; /* Safari and Chrome */
-}
-
-.column-rule-width(@width) {
-	column-rule-width: @width;
-	-moz-column-rule-width: @width; /* Firefox */
-	-webkit-column-rule-width: @width; /* Safari and Chrome */
-}
-
-.column-span(@span) {
-	column-span: @span;
-	-webkit-column-span: @span; /* Safari and Chrome */
-}
-
-.column-width(@width) {
-	column-width: @width;
-	-moz-column-width: @width; /* Safari and Chrome */
-	-webkit-column-width: @width; /* Safari and Chrome */
-}
-
-.columns(@width, @count) {
-	@val: @width @count;
-	
-	columns: @val;
-	-webkit-columns: @val; /* Safari and Chrome */
-}
-
-.column-count(@count) {
-	column-count: @count;
-	-moz-column-count: @count; /* Firefox */
-	-webkit-column-count: @count; /* Safari and Chrome */
+	-moz-box-sizing: @sizing; /* Firefox */
+	box-sizing: @sizing;
 }
 
 .keyframes(@name, @from, @to) {
-	@keyframes @name { from {@from} to {@to} }
-	@-moz-keyframes @name { from {@from} to {@to} } /* Firefox */
-	@-ms-keyframes @name { from {@from} to {@to} } /* Internet Explore 9 */
 	@-webkit-keyframes @name { from {@from} to {@to} } /* Safari and Chrome */
+	@-moz-keyframes @name { from {@from} to {@to} } /* Firefox */
+	@keyframes @name { from {@from} to {@to} }
 }
 
 .marquee-direction(@direction) {
 	/* UNTESTED, NO DOCUMENTATION AVAILABLE */
-	marquee-direction: @direction;
-	-moz-marquee-direction: @direction; /* Firefox */
 	-webkit-marquee-direction: @direction; /* Safari and Chrome */
+	-moz-marquee-direction: @direction; /* Firefox */
+	marquee-direction: @direction;
 }
 
 .marquee-play-count(@count) {
 	/* UNTESTED, NO DOCUMENTATION AVAILABLE */
-	marquee-count: @count;
-	-moz-marquee-count: @count; /* Firefox */
 	-webkit-marquee-count: @count; /* Safari and Chrome */
+	-moz-marquee-count: @count; /* Firefox */
+	marquee-count: @count;
 }
 
 .marquee-speed(@speed) {
 	/* UNTESTED, NO DOCUMENTATION AVAILABLE */
-	marquee-speed: @speed;
-	-moz-marquee-speed: @speed; /* Firefox */
 	-webkit-marquee-speed: @speed; /* Safari and Chrome */
+	-moz-marquee-speed: @speed; /* Firefox */
+	marquee-speed: @speed;
 }
 
 .marquee-style(@style) {
 	/* UNTESTED, NO DOCUMENTATION AVAILABLE */
-	marquee-style: @style;
-	-moz-marquee-style: @style; /* Firefox */
 	-webkit-marquee-style: @style; /* Safari and Chrome */
+	-moz-marquee-style: @style; /* Firefox */
+	marquee-style: @style;
 }
 
 .perspective(@perspective) {
-	perspective: @perspective;
 	-webkit-perspective: @perspective; /* Safari */
+	perspective: @perspective;
 }
 
 .perspective-origin(@x-axis, @y-axis) {
 	@val: @x-axis @y-axis;
 	
-	perspective-origin: @val;
 	-webkit-perspective-origin: @val; /* Safari */
+	perspective-origin: @val;
 }
 
 .phonemes(@phonemes) {
-	phonemes: @phonemes;
 	-xv-phonemes: @phonemes; /* Opera */
+	phonemes: @phonemes;
 }
 
 .opacity(@opacity: 100) {
 	@normal-opacity: @opacity / 100;
 	
-	opacity: @normal-opacity;
 	filter: e('alpha(opacity=')@opacity e(')'); /* Internet Explorer */
-	-khtml-opacity: @normal-opacity; /* Safari */
-	-moz-opacity: @normal-opacity; /* Firefox */
-}
-
-.transform(@degrees) {
-	transform: rotate( @degrees );
-	-moz-transform: rotate( @degrees ); /* Firefox */
-	-ms-transform: rotate( @degrees ); /* Internet Explore 9 */
-	-o-transform: rotate( @degrees ); /* Opera */
-	-webkit-transform: rotate( @degrees ); /* Safari and Chrome */
-}
-
-.transform-origin(@x-axis, @y-axis) {
-	@val: @x-axis @y-axis;
-	
-	transform-origin: @val;
-	-moz-transform-origin: @val; /* Firefox */
-	-ms-transform-origin: @val; /* Internet Explore 9 */
-	-o-transform-origin: @val; /* Opera */
-	-webkit-transform-origin: @val; /* Safari and Chrome */
-}
-
-.transform-style(@style) {
-	transform-style: @style;
-	-webkit-transform-style: @style; /* Safari and Chrome */
-}
-
-.transition(@transition) {
-	transition: @transition;
-	-moz-transition: @transition; /* Firefox 4 */
-	-ms-transition: @transition; /* Internet Explore 9 */
-	-o-transition: @transition; /* Opera */
-	-webkit-transition: @transition; /* Safari and Chrome */
-}
-
-.transition-property(@property) {
-	transition-property: @property;
-	-moz-transition-property: @property; /* Firefox 4 */
-	-ms-transition-property: @property; /* Internet Explore 9 */
-	-o-transition-property: @property; /* Opera */
-	-webkit-transition-property: @property; /* Safari and Chrome */
-}
-
-.transition-duration(@duration) {
-	transition-duration: @duration;
-	-moz-transition-duration: @duration; /* Firefox 4 */
-	-ms-transition-duration: @duration; /* Internet Explore 9 */
-	-o-transition-duration: @duration; /* Opera */
-	-webkit-transition-duration: @duration; /* Safari and Chrome */
-}
-
-.transition-timing-function(@function) {
-	transition-timing-function: @function;
-	-moz-transition-timing-function: @function; /* Firefox 4 */
-	-ms-transition-timing-function: @function; /* Internet Explore 9 */
-	-o-transition-timing-function: @function; /* Opera */
-	-webkit-transition-timing-function: @function; /* Safari and Chrome */
-}
-
-.transition-delay(@delay) {
-	transition-delay: @delay;
-	-moz-transition-delay: @delay; /* Firefox 4 */
-	-ms-transition-delay: @delay; /* Internet Explore 9 */
-	-o-transition-delay: @delay; /* Opera */
-	-webkit-transition-delay: @delay; /* Safari and Chrome */
+	opacity: @normal-opacity;
 }
 
 .voice-balance(@balance) {
-	voice-balance: @balance;
 	-xv-voice-balance: @balance; /* Opera */
+	voice-balance: @balance;
 }
 
 .voice-duration(@duration) {
-	voice-duration: @duration;
 	-xv-voice-duration: @duration; /* Opera */
+	voice-duration: @duration;
 }
 
 .voice-pitch(@pitch) {
-	voice-pitch: @pitch;
 	-xv-voice-pitch: @pitch; /* Opera */
+	voice-pitch: @pitch;
 }
 
 .voice-pitch-range(@range) {
@@ -356,18 +123,18 @@
 }
 
 .voice-rate(@rate) {
-	voice-rate: @rate;
 	-xv-voice-rate: @rate; /* Opera */
+	voice-rate: @rate;
 }
 
 .voice-stress(@stress) {
-	voice-stress: @stress;
 	-xv-voice-stress: @stress; /* Opera */
+	voice-stress: @stress;
 }
 
 .voice-volume(@volume) {
-	voice-volume: @volume;
 	-xv-voice-volume: @volume; /* Opera */
+	voice-volume: @volume;
 }
 
 /**
@@ -392,14 +159,12 @@
 /* Selection colours (easy to forget) */
 .select-color(@color) {
 	* {
-		&::selection { background: @color; }
 		&::-moz-selection { background: @color; } /* Firefox */
-		&::-webkit-selection { background: @color; } /* Safari and Chrome */
+		&::selection { background: @color; }
 		
 		img {
-			&::selection { background: transparent; }
 			&::-moz-selection { background: transparent; } /* Firefox */
-			&::-webkit-selection { background: transparent; } /* Safari and Chrome */
+			&::selection { background: transparent; }
 		}
 	}
 }
