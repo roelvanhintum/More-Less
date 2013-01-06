@@ -6,7 +6,7 @@ The More.less library is dedicated to make Less CSS code easier to write for cro
 about
 -----
 
-Building More.less code requires less.js 1.1.4 or newer. Users of less.app can replace the app's content with the newest version.
+Building More.less code requires less.js.
 For more information, visit <http://roel.vanhintum.eu/more-less/>.
 
 license
