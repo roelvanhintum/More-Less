@@ -301,11 +301,27 @@
 	transition: @transition;
 }
 
+.transition-browser-specific(@transition) {
+	-webkit-transition: ~"-webkit-@{transition}"; /* Safari and Chrome */
+	-moz-transition: ~"-moz-@{transition}"; /* Firefox 4 */
+	-ms-transition: ~"-ms-@{transition}"; /* Internet Explore 9 */
+	-o-transition: ~"-o-@{transition}"; /* Opera */
+	transition: @transition;
+}
+
 .transition-property(@property) {
 	-webkit-transition-property: @property; /* Safari and Chrome */
 	-moz-transition-property: @property; /* Firefox 4 */
 	-ms-transition-property: @property; /* Internet Explore 9 */
 	-o-transition-property: @property; /* Opera */
+	transition-property: @property;
+}
+
+.transition-property-browser-specific(@property) {
+	-webkit-transition-property: ~"-webkit-@{property}"; /* Safari and Chrome */
+	-moz-transition-property: ~"-moz-@{property}"; /* Firefox 4 */
+	-ms-transition-property: ~"-ms-@{property}"; /* Internet Explore 9 */
+	-o-transition-property: ~"-o-@{property}"; /* Opera */
 	transition-property: @property;
 }
 
