@@ -1,376 +1,370 @@
 /**
  * More.less: A Less CSS Library
- * Version      : 1.0
+ * Version      : 1.0.1
  * Last Updated : 2013-01-06
  * Author       : Roel van Hintum
  * Website      : http://roel.vanhintum.eu
  */
 
+@cacheBuster: ~`"?" + Math.floor(Math.random() * 10000)`;
+
 .animation(@name, @duration, @timing-function, @delay, @iteration-count, @direction)  {
 	@val: @name @duration @timing-function @delay @iteration-count @direction;
 	
-	-webkit-animation: @val; /* Safari and Chrome */
-	-moz-animation: @val; /* Firefox */
-	-ms-animation: @val; /* Internet Explore 9 */
+	-webkit-animation: @val; // Safari and Chrome
+	-moz-animation: @val; // Firefox
+	-ms-animation: @val; // Internet Explore 9
 	animation: @val;
 }
 
 .animation-name(@name) {
-	-webkit-animation-name: @name; /* Safari and Chrome */
-	-moz-animation-name: @name; /* Firefox */
-	-ms-animation-name: @name; /* Internet Explore 9 */
+	-webkit-animation-name: @name; // Safari and Chrome
+	-moz-animation-name: @name; // Firefox
+	-ms-animation-name: @name; // Internet Explore 9
 	animation-name: @name;
 }
 
 .animation-duration(@duration) {
-	-webkit-animation-duration: @duration; /* Safari and Chrome */
-	-moz-animation-duration: @duration; /* Firefox */
-	-ms-animation-duration: @duration; /* Internet Explore 9 */
+	-webkit-animation-duration: @duration; // Safari and Chrome
+	-moz-animation-duration: @duration; // Firefox
+	-ms-animation-duration: @duration; // Internet Explore 9
 	animation-duration: @duration;
 }
 
 .animation-timing-function(@timing-function) {
-	-webkit-animation-timing-function: @timing-function; /* Safari and Chrome */
-	-moz-animation-timing-function: @timing-function; /* Firefox */
-	-ms-animation-timing-function: @timing-function; /* Internet Explore 9 */
+	-webkit-animation-timing-function: @timing-function; // Safari and Chrome
+	-moz-animation-timing-function: @timing-function; // Firefox
+	-ms-animation-timing-function: @timing-function; // Internet Explore 9
 	animation-timing-function: @timing-function;
 }
 
 .animation-delay(@delay) {
-	-webkit-animation-delay: @delay; /* Safari and Chrome */
-	-moz-animation-delay: @delay; /* Firefox */
-	-ms-animation-delay: @delay; /* Internet Explore 9 */
+	-webkit-animation-delay: @delay; // Safari and Chrome
+	-moz-animation-delay: @delay; // Firefox
+	-ms-animation-delay: @delay; // Internet Explore 9
 	animation-delay: @delay;
 }
 
 .animation-iteration-count(@iteration-count) {
-	-webkit-animation-iteration-count: @iteration-count; /* Safari and Chrome */
-	-moz-animation-iteration-count: @iteration-count; /* Firefox */
-	-ms-animation-iteration-count: @iteration-count; /* Internet Explore 9 */
+	-webkit-animation-iteration-count: @iteration-count; // Safari and Chrome
+	-moz-animation-iteration-count: @iteration-count; // Firefox
+	-ms-animation-iteration-count: @iteration-count; // Internet Explore 9
 	animation-iteration-count: @iteration-count;
 }
 
 .animation-direction(@direction) {
-	-webkit-animation-direction: @direction; /* Safari and Chrome */
-	-moz-animation-direction: @direction; /* Firefox */
+	-webkit-animation-direction: @direction; // Safari and Chrome
+	-moz-animation-direction: @direction; // Firefox
 	animation-direction: @direction;
 }
 
 .animation-play-state(@state) {
-	-webkit-animation-play-state: @state; /* Safari and Chrome */
-	-moz-animation-play-state: @state; /* Firefox */
-	-ms-animation-play-state: @state; /* Internet Explore 9 */
+	-webkit-animation-play-state: @state; // Safari and Chrome
+	-moz-animation-play-state: @state; // Firefox
+	-ms-animation-play-state: @state; // Internet Explore 9
 	animation-play-state: @state;
 }
 
 .appearance(@appearance) {
-	-webkit-appearance: @appearance; /* Safari and Chrome */
-	-moz-appearance: @appearance; /* Firefox */
+	-webkit-appearance: @appearance; // Safari and Chrome
+	-moz-appearance: @appearance; // Firefox
 	appearance: @appearance;
 }
 
 .backface-visibility(@visibility) {
-	-webkit-backface-visibility: @visibility; /* Safari and Chrome */
-	-moz-backface-visibility: @visibility; /* Firefox */
-	-ms-backface-visibility: @visibility; /* Internet Explorer */
+	-webkit-backface-visibility: @visibility; // Safari and Chrome
+	-moz-backface-visibility: @visibility; // Firefox
+	-ms-backface-visibility: @visibility; // Internet Explorer
 	backface-visibility: @visibility;
 }
 
 .background-clip(@clipping) {
-	-webkit-background-clip: @clipping; /* Safari and Chrome */
+	-webkit-background-clip: @clipping; // Safari and Chrome
 	background-clip: @clipping;
 }
 
 .background-gradient(@startcolor, @endcolor) {
-	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor)); /* Internet Explorer */
-	background: -webkit-gradient(linear, left top, left bottom, from(@startcolor), to(@endcolor)); /* Safari and Chrome */
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr=%d,endColorstr=%d)", @startcolor, @endcolor)); // Internet Explorer
+	background: -webkit-gradient(linear, left top, left bottom, from(@startcolor), to(@endcolor)); // Safari and Chrome
 	background: -moz-linear-gradient(top,  @startcolor,  @endcolor); /* Firefox 3.6+ */
-	background: -ms-linear-gradient(top,  @startcolor,  @endcolor); /* Internet Explore 9 */
+	background: -ms-linear-gradient(top,  @startcolor,  @endcolor); // Internet Explore 9
 	background: @startcolor;
 }
 
 .background-size(@type: cover) {
-	-webkit-background-size: @type; /* Safari and Chrome */
-	-moz-background-size: @type; /* Firefox */
-	-o-background-size: @type; /* Opera */
+	-webkit-background-size: @type; // Safari and Chrome
+	-moz-background-size: @type; // Firefox
+	-o-background-size: @type; // Opera
 	background-size: @type;
 }
 
 .border-image(@image) {
-	-webkit-border-image: @image; /* Safari and Chrome */
-	-moz-border-image: @image; /* Firefox */
-	-o-border-image: @image; /* Opera */
+	-webkit-border-image: @image; // Safari and Chrome
+	-moz-border-image: @image; // Firefox
+	-o-border-image: @image; // Opera
 	border-image: @image;
 }
 
 .border-radius(@radius) {
-	-webkit-border-radius: @radius; /* Safari and Chrome */
-	-moz-border-radius: @radius; /* Firefox */
+	-webkit-border-radius: @radius; // Safari and Chrome
+	-moz-border-radius: @radius; // Firefox
 	border-radius: @radius;
 }
 
 .box-align(@alignment) {
-	-webkit-box-align: @alignment; /* Safari and Chrome */
-	-moz-box-align: @alignment; /* Firefox */
+	-webkit-box-align: @alignment; // Safari and Chrome
+	-moz-box-align: @alignment; // Firefox
 	box-align: @alignment;
 }
 
 .box-direction(@direction) {
-	-webkit-box-direction: @direction; /* Safari and Chrome */
-	-moz-box-direction: @direction; /* Firefox */
+	-webkit-box-direction: @direction; // Safari and Chrome
+	-moz-box-direction: @direction; // Firefox
 	box-direction: @direction;
 }
 
 .box-flex(@flexibility) {
-	-webkit-box-flex: @flexibility; /* Safari and Chrome */
-	-moz-box-flex: @flexibility; /* Firefox */
+	-webkit-box-flex: @flexibility; // Safari and Chrome
+	-moz-box-flex: @flexibility; // Firefox
 	box-flex: @flexibility;
 }
 
 .box-ordinal-group(@group) {
-	-webkit-box-ordinal-group: @group; /* Safari and Chrome */
-	-moz-box-ordinal-group: @group; /* Firefox */
+	-webkit-box-ordinal-group: @group; // Safari and Chrome
+	-moz-box-ordinal-group: @group; // Firefox
 	box-ordinal-group: @group;
 }
 
 .box-orient(@orientation) {
-	-webkit-box-orient: @orientation; /* Safari and Chrome */
-	-moz-box-orient: @orientation; /* Firefox */
+	-webkit-box-orient: @orientation; // Safari and Chrome
+	-moz-box-orient: @orientation; // Firefox
 	box-orient: @orientation;
 }
 
 .box-pack(@position) {
-	-webkit-box-pack: @position; /* Safari and Chrome */
-	-moz-box-pack: @position; /* Firefox */
+	-webkit-box-pack: @position; // Safari and Chrome
+	-moz-box-pack: @position; // Firefox
 	box-pack: @position;
 }
 
 .box-shadow(@shadow) {
-	-webkit-box-shadow: @shadow; /* Safari and Chrome */
-	-moz-box-shadow: @shadow; /* Firefox */
+	-webkit-box-shadow: @shadow; // Safari and Chrome
+	-moz-box-shadow: @shadow; // Firefox
 	box-shadow: @shadow;
 }
 
 .box-sizing(@sizing) {
-	-webkit-box-sizing: @sizing; /* Safari */
-	-moz-box-sizing: @sizing; /* Firefox */
+	-webkit-box-sizing: @sizing; // Safari
+	-moz-box-sizing: @sizing; // Firefox
 	box-sizing: @sizing;
 }
 
 .column-gap(@sizing) {
-	-webkit-column-gap: @sizing; /* Safari and Chrome */
-	-moz-column-gap: @sizing; /* Firefox */
+	-webkit-column-gap: @sizing; // Safari and Chrome
+	-moz-column-gap: @sizing; // Firefox
 	column-gap: @sizing;
 }
 
 .column-rule(@width, @style, @color) {
 	@val: @width @style @color;
 	
-	-webkit-column-rule: @val; /* Safari and Chrome */
-	-moz-column-rule: @val; /* Firefox */
+	-webkit-column-rule: @val; // Safari and Chrome
+	-moz-column-rule: @val; // Firefox
 	column-rule: @val;
 }
 
 .column-rule-color(@color) {
-	-webkit-column-rule-color: @color; /* Safari and Chrome */
-	-moz-column-rule-color: @color; /* Firefox */
+	-webkit-column-rule-color: @color; // Safari and Chrome
+	-moz-column-rule-color: @color; // Firefox
 	column-rule-color: @color;
 }
 
 .column-rule-style(@style) {
-	-webkit-column-rule-style: @style; /* Safari and Chrome */
-	-moz-column-rule-style: @style; /* Firefox */
+	-webkit-column-rule-style: @style; // Safari and Chrome
+	-moz-column-rule-style: @style; // Firefox
 	column-rule-style: @style;
 }
 
 .column-rule-width(@width) {
-	-webkit-column-rule-width: @width; /* Safari and Chrome */
-	-moz-column-rule-width: @width; /* Firefox */
+	-webkit-column-rule-width: @width; // Safari and Chrome
+	-moz-column-rule-width: @width; // Firefox
 	column-rule-width: @width;
 }
 
 .column-span(@span) {
-	-webkit-column-span: @span; /* Safari and Chrome */
+	-webkit-column-span: @span; // Safari and Chrome
 	column-span: @span;
 }
 
 .column-width(@width) {
-	-webkit-column-width: @width; /* Safari and Chrome */
-	-moz-column-width: @width; /* Safari and Chrome */
+	-webkit-column-width: @width; // Safari and Chrome
+	-moz-column-width: @width; // Safari and Chrome
 	column-width: @width;
 }
 
 .columns(@width, @count) {
 	@val: @width @count;
 	
-	-webkit-columns: @val; /* Safari and Chrome */
+	-webkit-columns: @val; // Safari and Chrome
 	columns: @val;
 }
 
 .column-count(@count) {
-	-webkit-column-count: @count; /* Safari and Chrome */
-	-moz-column-count: @count; /* Firefox */
+	-webkit-column-count: @count; // Safari and Chrome
+	-moz-column-count: @count; // Firefox
 	column-count: @count;
 }
 
-.keyframes(@name, @from, @to) {
-	@-webkit-keyframes @name { from {@from} to {@to} } /* Safari and Chrome */
-	@-moz-keyframes @name { from {@from} to {@to} } /* Firefox */
-	@-ms-keyframes @name { from {@from} to {@to} } /* Internet Explore 9 */
-	@keyframes @name { from {@from} to {@to} }
-}
-
 .marquee-direction(@direction) {
-	-webkit-marquee-direction: @direction; /* Safari and Chrome */
-	-moz-marquee-direction: @direction; /* Firefox */
+	-webkit-marquee-direction: @direction; // Safari and Chrome
+	-moz-marquee-direction: @direction; // Firefox
 	marquee-direction: @direction;
 }
 
 .marquee-play-count(@count) {
-	-webkit-marquee-count: @count; /* Safari and Chrome */
-	-moz-marquee-count: @count; /* Firefox */
+	-webkit-marquee-count: @count; // Safari and Chrome
+	-moz-marquee-count: @count; // Firefox
 	marquee-count: @count;
 }
 
 .marquee-speed(@speed) {
-	-webkit-marquee-speed: @speed; /* Safari and Chrome */
-	-moz-marquee-speed: @speed; /* Firefox */
+	-webkit-marquee-speed: @speed; // Safari and Chrome
+	-moz-marquee-speed: @speed; // Firefox
 	marquee-speed: @speed;
 }
 
 .marquee-style(@style) {
-	-webkit-marquee-style: @style; /* Safari and Chrome */
-	-moz-marquee-style: @style; /* Firefox */
+	-webkit-marquee-style: @style; // Safari and Chrome
+	-moz-marquee-style: @style; // Firefox
 	marquee-style: @style;
 }
 
 .perspective(@perspective) {
-	-webkit-perspective: @perspective; /* Safari */
+	-webkit-perspective: @perspective; // Safari
 	perspective: @perspective;
 }
 
 .perspective-origin(@x-axis, @y-axis) {
 	@val: @x-axis @y-axis;
 	
-	-webkit-perspective-origin: @val; /* Safari */
+	-webkit-perspective-origin: @val; // Safari
 	perspective-origin: @val;
 }
 
 .phonemes(@phonemes) {
-	-xv-phonemes: @phonemes; /* Opera */
+	-xv-phonemes: @phonemes; // Opera
 	phonemes: @phonemes;
 }
 
 .opacity(@alpha) {
 	@alpha-ie: @alpha * 100;
 	
-	filter: e('alpha(opacity=')@alpha-ie e(')'); /* Internet Explorer */
-	-khtml-opacity: @alpha; /* Safari */
-	-moz-opacity: @alpha; /* Firefox */
+	filter: e('alpha(opacity=')@alpha-ie e(')'); // Internet Explorer
+	-khtml-opacity: @alpha; // Safari
+	-moz-opacity: @alpha; // Firefox
 	opacity: @alpha;
 }
 
 .transform(@degrees) {
-	-webkit-transform: rotate( @degrees ); /* Safari and Chrome */
-	-moz-transform: rotate( @degrees ); /* Firefox */
-	-ms-transform: rotate( @degrees ); /* Internet Explore 9 */
-	-o-transform: rotate( @degrees ); /* Opera */
+	-webkit-transform: rotate( @degrees ); // Safari and Chrome
+	-moz-transform: rotate( @degrees ); // Firefox
+	-ms-transform: rotate( @degrees ); // Internet Explore 9
+	-o-transform: rotate( @degrees ); // Opera
 	transform: rotate( @degrees );
 }
 
 .transform-origin(@x-axis, @y-axis) {
 	@val: @x-axis @y-axis;
 	
-	-webkit-transform-origin: @val; /* Safari and Chrome */
-	-moz-transform-origin: @val; /* Firefox */
-	-ms-transform-origin: @val; /* Internet Explore 9 */
-	-o-transform-origin: @val; /* Opera */
+	-webkit-transform-origin: @val; // Safari and Chrome
+	-moz-transform-origin: @val; // Firefox
+	-ms-transform-origin: @val; // Internet Explore 9
+	-o-transform-origin: @val; // Opera
 	transform-origin: @val;
 }
 
 .transform-style(@style) {
-	-webkit-transform-style: @style; /* Safari and Chrome */
+	-webkit-transform-style: @style; // Safari and Chrome
 	transform-style: @style;
 }
 
 .transition(@transition) {
-	-webkit-transition: @transition; /* Safari and Chrome */
-	-moz-transition: @transition; /* Firefox 4 */
-	-ms-transition: @transition; /* Internet Explore 9 */
-	-o-transition: @transition; /* Opera */
+	-webkit-transition: @transition; // Safari and Chrome
+	-moz-transition: @transition; // Firefox 4
+	-ms-transition: @transition; // Internet Explore 9
+	-o-transition: @transition; // Opera
 	transition: @transition;
 }
 
 .transition-property(@property) {
-	-webkit-transition-property: @property; /* Safari and Chrome */
-	-moz-transition-property: @property; /* Firefox 4 */
-	-ms-transition-property: @property; /* Internet Explore 9 */
-	-o-transition-property: @property; /* Opera */
+	-webkit-transition-property: @property; // Safari and Chrome
+	-moz-transition-property: @property; // Firefox 4
+	-ms-transition-property: @property; // Internet Explore 9
+	-o-transition-property: @property; // Opera
 	transition-property: @property;
 }
 
 .transition-duration(@duration) {
-	-webkit-transition-duration: @duration; /* Safari and Chrome */
-	-moz-transition-duration: @duration; /* Firefox 4 */
-	-ms-transition-duration: @duration; /* Internet Explore 9 */
-	-o-transition-duration: @duration; /* Opera */
+	-webkit-transition-duration: @duration; // Safari and Chrome
+	-moz-transition-duration: @duration; // Firefox 4
+	-ms-transition-duration: @duration; // Internet Explore 9
+	-o-transition-duration: @duration; // Opera
 	transition-duration: @duration;
 }
 
 .transition-timing-function(@function) {
-	-webkit-transition-timing-function: @function; /* Safari and Chrome */
-	-moz-transition-timing-function: @function; /* Firefox 4 */
-	-ms-transition-timing-function: @function; /* Internet Explore 9 */
-	-o-transition-timing-function: @function; /* Opera */
+	-webkit-transition-timing-function: @function; // Safari and Chrome
+	-moz-transition-timing-function: @function; // Firefox 4
+	-ms-transition-timing-function: @function; // Internet Explore 9
+	-o-transition-timing-function: @function; // Opera
 	transition-timing-function: @function;
 }
 
 .transition-delay(@delay) {
-	-webkit-transition-delay: @delay; /* Safari and Chrome */
-	-moz-transition-delay: @delay; /* Firefox 4 */
-	-ms-transition-delay: @delay; /* Internet Explore 9 */
-	-o-transition-delay: @delay; /* Opera */
+	-webkit-transition-delay: @delay; // Safari and Chrome
+	-moz-transition-delay: @delay; // Firefox 4
+	-ms-transition-delay: @delay; // Internet Explore 9
+	-o-transition-delay: @delay; // Opera
 	transition-delay: @delay;
 }
 
 .voice-balance(@balance) {
-	-xv-voice-balance: @balance; /* Opera */
+	-xv-voice-balance: @balance; // Opera
 	voice-balance: @balance;
 }
 
 .voice-duration(@duration) {
-	-xv-voice-duration: @duration; /* Opera */
+	-xv-voice-duration: @duration; // Opera
 	voice-duration: @duration;
 }
 
 .voice-pitch(@pitch) {
-	-xv-voice-pitch: @pitch; /* Opera */
+	-xv-voice-pitch: @pitch; // Opera
 	voice-pitch: @pitch;
 }
 
 .voice-pitch-range(@range) {
-	-xv-voice-pitch-range: @range; /* Opera */
+	-xv-voice-pitch-range: @range; // Opera
 	voice-pitch-range: @range;
 }
 
 .voice-rate(@rate) {
-	-xv-voice-rate: @rate; /* Opera */
+	-xv-voice-rate: @rate; // Opera
 	voice-rate: @rate;
 }
 
 .voice-stress(@stress) {
-	-xv-voice-stress: @stress; /* Opera */
+	-xv-voice-stress: @stress; // Opera
 	voice-stress: @stress;
 }
 
 .voice-volume(@volume) {
-	-xv-voice-volume: @volume; /* Opera */
+	-xv-voice-volume: @volume; // Opera
 	voice-volume: @volume;
 }
 
-/**
- * Additional functions
- */
+// Additional functions
+// --------------------
 .clear-float() {
 	&:after {
 		clear: both;
@@ -383,31 +377,29 @@
 
 .display-inline-block() {
 	display: inline-block;
-	zoom: 1; /* Internet Explorer */
-	*display: inline; /* Internet Explorer */
+	zoom: 1; // Internet Explorer
+	*display: inline; // Internet Explorer
 }
 
-/* Selection colours (easy to forget) */
+// Selection colours (easy to forget)
 .select-color(@color) {
 	* {
-		&::-webkit-selection { background: @color; } /* Safari and Chrome */
-		&::-moz-selection { background: @color; } /* Firefox */
+		&::-webkit-selection { background: @color; } // Safari and Chrome
+		&::-moz-selection { background: @color; } // Firefox
 		&::selection { background: @color; }
 		
 		img {
-			&::-webkit-selection { background: transparent; } /* Safari and Chrome */
-			&::-moz-selection { background: transparent; } /* Firefox */
+			&::-webkit-selection { background: transparent; } // Safari and Chrome
+			&::-moz-selection { background: transparent; } // Firefox
 			&::selection { background: transparent; }
 		}
 	}
 }
 
+// http://meyerweb.com/eric/tools/css/reset/ 
+//   v2.0 | 20110126
+//   License: none (public domain)
 .reset() {
-	/* http://meyerweb.com/eric/tools/css/reset/ 
-	   v2.0 | 20110126
-	   License: none (public domain)
-	*/
-	
 	html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 	a, abbr, acronym, address, big, cite, code,
@@ -428,7 +420,7 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
-	/* HTML5 display-role reset for older browsers */
+	// HTML5 display-role reset for older browsers
 	article, aside, details, figcaption, figure, 
 	footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -451,4 +443,24 @@
 		border-collapse: collapse;
 		border-spacing: 0;
 	}
+}
+
+// Generate font-face declarations
+.font-face(@family, @filename, @filepath, @weight: normal, @style: normal) {
+  @font-eot:    e(%("%d%d.eot%d", @filepath, @filename, @cacheBuster));
+  @font-eot-ie: e(%("%d%d.eot%d#iefix", @filepath, @filename, @cacheBuster));
+  @font-woff:   e(%("%d%d.woff%d", @filepath, @filename, @cacheBuster));
+  @font-ttf:    e(%("%d%d.ttf%d", @filepath, @filename, @cacheBuster));
+  @font-svg:    e(%("%d%d.svg%d#%d", @filepath, @filename, @cacheBuster, @filename));
+
+  @font-face {
+    font-family: '@{family}';
+    src: url('@{font-eot}');
+    src: url('@{font-eot-ie}') format('embedded-opentype'),
+         url('@{font-svg}') format('svg'),
+         url('@{font-woff}') format('woff'),
+         url('@{font-ttf}') format('truetype');
+    font-weight:  @weight;
+    font-style:   @style;
+  }
 }
