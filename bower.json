@@ -1,0 +1,22 @@
+{
+  "name": "more-less",
+  "version": "1.1.1",
+  "homepage": "https://github.com/roelvanhintum/More-Less",
+  "authors": [
+    "Roel van Hintum"
+  ],
+  "description": "LESS mixin lib.",
+  "main": "more.less",
+  "keywords": [
+    "less",
+    "mixin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

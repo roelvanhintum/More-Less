@@ -1,0 +1,30 @@
+{
+  "name": "more-less",
+  "version": "1.1.1",
+  "description": "LESS CSS mixin lib.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roelvanhintum/More-Less.git"
+  },
+  "keywords": [
+    "LESS",
+    "mixins",
+    "library"
+  ],
+  "author": "Roel van Hintum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roelvanhintum/More-Less/issues"
+  },
+  "homepage": "https://github.com/roelvanhintum/More-Less",
+  "devDependencies": {
+    "gulp": "^3.6.1",
+    "gulp-recess": "^0.3.0",
+    "gulp-less": "^1.2.3",
+    "gulp-util": "^2.2.14"
+  }
+}
