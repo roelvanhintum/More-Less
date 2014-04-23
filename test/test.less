@@ -4,12 +4,20 @@
 
 .font-face('FontFamily', 'font-family', './', normal, normal);
 
+@test-frames: {
+  0% { top: 0; }
+  50% { top: 10px; }
+  50% { top: 20px; }
+  100% { top: 0; }
+};
+.keyframes(test, @test-frames);
+
 .test-animation {
-  .animation('test' .3s ease);
+  .animation(test .3s ease);
 }
 
 .test-animation-name {
-  .animation-name('test');
+  .animation-name(test);
 }
 
 .test-animation-duration {
@@ -46,4 +54,135 @@
 
 .test-background-clip {
   .background-clip(border-box);
+}
+
+.test-background-gradient {
+  .background-gradient(#fff, #000);
+}
+
+.test-background-size {
+  .background-size(cover);
+}
+
+.test-border-image {
+  .border-image(url('test.png') 10 10 round);
+}
+
+.test-border-radius {
+  .border-radius(1px);
+}
+
+.test-box-shadow {
+  .box-shadow(1px 1px 10px #fff);
+}
+
+.test-box-sizing {
+  .box-sizing(border-box);
+}
+
+.test-column-fill {
+  .column-fill(balance);
+}
+
+.test-column-gap {
+  .column-gap(5px);
+}
+
+.test-column-rule {
+  .column-rule(#f60 dotted);
+}
+
+.test-column-rule-color {
+  .column-rule-color(#f60);
+}
+
+.test-column-rule-style {
+  .column-rule-style(dotted);
+}
+
+.test-column-rule-width {
+  .column-rule-width(1px);
+}
+
+.test-column-span {
+  .column-span(all);
+}
+
+.test-column-width {
+  .column-width(100px);
+}
+
+.test-columns {
+  .columns(2);
+}
+
+.test-perspective {
+  .perspective(100px);
+}
+
+.test-perspective-origin {
+  .perspective-origin(50% 50%);
+}
+
+@placeholder-style: {
+  color: #f60;
+};
+.test-placeholder {
+  .placeholder(@placeholder-style);
+}
+
+.test-opacity {
+  .opacity(.1);
+}
+
+.transform-test {
+  .transform(translateX(100%));
+}
+
+.test-transform-origin {
+  .transform-origin(50% 50%);
+}
+
+.test-transform-style {
+  .transform-style(preserve-3d);
+}
+
+.test-transition {
+  .transition(left .4s ease);
+}
+
+.test-transition-transform {
+  .transition-transform(.4s ease);
+}
+
+.test-transition-property {
+  .transition-property(sliding-vertically);
+}
+
+.test-transition-property-transform {
+  .transition-property-transform(e(', left'));
+}
+
+.test-transition-duration {
+  .transition-duration(.3s);
+}
+
+.test-transition-timing-function {
+  .transition-timing-function(ease-in-out);
+}
+
+.test-transition-delay {
+  .transition-delay(1s);
+}
+
+.test-clearfix {
+  .clearfix();
+}
+
+.test-display-inline-block {
+  .display-inline-block();
+}
+
+.test-select-color {
+  .select-color(#f60);
 }
