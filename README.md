@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/roelvanhintum/More-Less.svg?branch=master)](https://travis-ci.org/roelvanhintum/More-Less)
-
 More.less
 =======
+
+DEPRICATED, just use [autoprefixer](https://www.npmjs.com/package/autoprefixer).
 
 The More.less library is dedicated to make Less CSS code easier to write for cross-browser compatibility.
 
